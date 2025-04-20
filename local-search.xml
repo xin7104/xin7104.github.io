@@ -8,7 +8,7 @@
     <link href="/2025/04/20/25-4-20/"/>
     <url>/2025/04/20/25-4-20/</url>
     
-    <content type="html"><![CDATA[<h1 id="一，"><a href="#一，" class="headerlink" title="一，"></a>一，</h1><p>​陈在搞通讯。</p><p>​通讯搞好了，目前在弄循迹。小车不在我这测不了距离，不用步进电机应该可以吧，想买个麦克轮but没money算了，又报销不了。</p><p>​把ppt做了，之后看下位置PID，积分限幅那些加上。</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">hexo clean <span class="hljs-variable">&amp;&amp;</span> hexo g <span class="hljs-variable">&amp;&amp;</span> hexo d<br></code></pre></td></tr></table></figure><h1 id="一，"><a href="#一，" class="headerlink" title="一，"></a>一，</h1><p>​c在搞通讯。</p><p>​通讯搞好了，目前在弄循迹。小车不在我这测不了距离，不用步进电机应该可以吧，想买个麦克轮but没money算了，又报销不了。</p><p>​把ppt做了，之后看下位置PID，积分限幅那些加上。</p><p>​让小车走一定距离的误差大可能是因为没弄位置环？到指定距离后有惯性停不下来。之后看下江科大讲的看能不能改下代码，加上摄像头巡线误差肯定更大。<br>​今天啥都没干光测了距离。之后向c要下摄像头和通信的代码。</p>]]></content>
     
     
     
