@@ -19,23 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    今日份小车后面转弯要用到陀螺仪。陀螺仪JY61P，去年电赛M0用到过的代码 12345678910111213141516void UART_JY61P_INST_IRQHandler(void)&#123;    getdata[cnt]&#x3D;DL_UART_Main_receiveData(UAR">
+    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    今日份主函数 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465while (1)  &#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="25-4-27">
-<meta property="og:url" content="https://xin7104.github.io/2025/04/27/25-4-27/index.html">
+<meta property="og:title" content="25-4-28">
+<meta property="og:url" content="https://xin7104.github.io/2025/04/28/25-4-28/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    今日份小车后面转弯要用到陀螺仪。陀螺仪JY61P，去年电赛M0用到过的代码 12345678910111213141516void UART_JY61P_INST_IRQHandler(void)&#123;    getdata[cnt]&#x3D;DL_UART_Main_receiveData(UAR">
+<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    今日份主函数 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465while (1)  &#123;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://xin7104.github.io/2025/04/27/25-4-27/01.jpg">
-<meta property="article:published_time" content="2025-04-27T09:07:36.000Z">
-<meta property="article:modified_time" content="2025-04-27T14:25:16.907Z">
+<meta property="article:published_time" content="2025-04-28T13:31:51.000Z">
+<meta property="article:modified_time" content="2025-04-28T13:44:08.539Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xin7104.github.io/2025/04/27/25-4-27/01.jpg">
   
   
   
-  <title>25-4-27 - Hexo</title>
+  <title>25-4-28 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="25-4-27"></span>
+            <span id="subtitle" data-typed-text="25-4-28"></span>
           
         </div>
 
@@ -212,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-27 17:07" pubdate>
-          April 27, 2025 pm
+        <time datetime="2025-04-28 21:31" pubdate>
+          April 28, 2025 pm
         </time>
       </span>
     
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          293 words
+          403 words
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          3 mins
+          4 mins
         
       </span>
     
@@ -272,7 +270,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">25-4-27</h1>
+            <h1 id="seo-header">25-4-28</h1>
             
             
               <div class="markdown-body">
@@ -281,16 +279,15 @@
 
 
 
-<h1 id="今日份"><a href="#今日份" class="headerlink" title="今日份"></a>今日份</h1><p>小车后面转弯要用到陀螺仪。<br>陀螺仪JY61P，去年电赛M0用到过的代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">UART_JY61P_INST_IRQHandler</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>    getdata[cnt]=DL_UART_Main_receiveData(UART_JY61P_INST);<br>    <span class="hljs-keyword">if</span>(getdata[<span class="hljs-number">0</span>]==<span class="hljs-number">0x53</span>)<br>    &#123;<br>        cnt++;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(cnt==<span class="hljs-number">10</span>)<br>    &#123;<br>        NVIC_DisableIRQ(UART_JY61P_INST_INT_IRQN);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">uint8_t</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">3</span>;j++)=(((<span class="hljs-type">short</span>) getdata[<span class="hljs-number">2</span>+j*<span class="hljs-number">2</span>]&lt;&lt;<span class="hljs-number">8</span>)|getdata[<span class="hljs-number">1</span>+j*<span class="hljs-number">2</span>])/<span class="hljs-number">182</span>; <br>        NVIC_ClearPendingIRQ(UART_JY61P_INST_INT_IRQN);<br>        NVIC_EnableIRQ(UART_JY61P_INST_INT_IRQN);<br>        cnt=<span class="hljs-number">0</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="今日份"><a href="#今日份" class="headerlink" title="今日份"></a>今日份</h1><p>主函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)<br>  &#123;   <br>      <span class="hljs-keyword">if</span>(x!=<span class="hljs-number">1</span>&amp;&amp;t==<span class="hljs-number">0</span>)<br>           Load(<span class="hljs-number">13</span>,<span class="hljs-number">10</span>);<br>      <span class="hljs-keyword">if</span>(x==<span class="hljs-number">1</span>)&#123;<br>          out2 = PID_realize2(&amp;pidHW_Tracking,r) ;<br>          Load(<span class="hljs-number">20</span>-out2,<span class="hljs-number">20</span>+out2);<br>      &#125;<br>      <span class="hljs-keyword">if</span>(t==<span class="hljs-number">1</span>)&#123;<br>          p_cnt++;<br>      Load(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>      HAL_Delay(<span class="hljs-number">500</span>);<br>          t=<span class="hljs-number">0</span>;<br>      &#125;<br>      <span class="hljs-keyword">if</span>(g_ucUsart2ReceiveData==<span class="hljs-number">0x00</span>&amp;&amp;x==<span class="hljs-number">1</span>)&#123;<br>         <br>          <span class="hljs-keyword">if</span>(p_cnt!=<span class="hljs-number">6</span>&amp;&amp;p_cnt!=<span class="hljs-number">12</span>)&#123;<br>              <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> q=<span class="hljs-number">450</span>;q&gt;<span class="hljs-number">0</span>;q--)&#123;<br>                  HAL_Delay(<span class="hljs-number">1</span>);<br>                  Load(<span class="hljs-number">20</span>,<span class="hljs-number">14</span>);<br>              <span class="hljs-keyword">if</span>(g_ucUsart2ReceiveData!=<span class="hljs-number">0x00</span>)&#123;<span class="hljs-keyword">break</span>;&#125;&#125;<br>          Load(<span class="hljs-number">15</span>,<span class="hljs-number">-15</span>);<br>           <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)<br>          &#123;<br>              HAL_Delay(<span class="hljs-number">1</span>);<br>              <span class="hljs-keyword">if</span>(g_ucUsart2ReceiveData!=<span class="hljs-number">0x00</span>)&#123;<span class="hljs-keyword">break</span>;&#125;<br>          &#125;<br>          &#125;<br>          <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(p_cnt==<span class="hljs-number">6</span>)<br>          &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> q=<span class="hljs-number">450</span>;q&gt;<span class="hljs-number">0</span>;q--)<br>              &#123;<br>                  HAL_Delay(<span class="hljs-number">1</span>);<br>                  Load(<span class="hljs-number">20</span>,<span class="hljs-number">14</span>);<br>                  <span class="hljs-keyword">if</span>(g_ucUsart2ReceiveData!=<span class="hljs-number">0x00</span>)&#123;b=<span class="hljs-number">1</span>;<span class="hljs-keyword">break</span>;&#125;<br>                  b=<span class="hljs-number">0</span>;<br>              &#125;<br>              <span class="hljs-keyword">if</span>(b==<span class="hljs-number">0</span>)&#123;<br>              turn(<span class="hljs-number">270</span>);<br>              Load(<span class="hljs-number">20</span>,<span class="hljs-number">20</span>);<br>               HAL_Delay(<span class="hljs-number">1000</span>);<br>              turn(<span class="hljs-number">0</span>);<br>              x=<span class="hljs-number">0</span>;&#125;<br>          &#125;<br>      &#125;<br>	  <span class="hljs-keyword">if</span>(rx3 == <span class="hljs-number">0x11</span>||p_cnt == <span class="hljs-number">12</span>)&#123;<br>		  Load(<span class="hljs-number">15</span>,<span class="hljs-number">15</span>);<br>		  turn(<span class="hljs-number">270</span>);<br>		  Load(<span class="hljs-number">15</span>,<span class="hljs-number">15</span>);<br>          HAL_Delay(<span class="hljs-number">320</span>);<br>		  turn(<span class="hljs-number">0</span>);<br>		  <br>		  Load(<span class="hljs-number">20</span>,<span class="hljs-number">20</span>);<br>		  HAL_Delay(<span class="hljs-number">4000</span>);<br>		  stop = <span class="hljs-number">1</span>;<br>	  &#125;<br>	  <span class="hljs-keyword">if</span>(stop == <span class="hljs-number">1</span>)&#123;<br>		  <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)&#123;<br>			  Load(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>		  &#125;<br>	  &#125;<br>    <span class="hljs-comment">/* USER CODE END WHILE */</span><br><br>    <span class="hljs-comment">/* USER CODE BEGIN 3 */</span><br>  &#125;<br></code></pre></td></tr></table></figure>
 
-<p>网上搜的 WT61C-TTL 陀螺仪的代码，可以用。陀螺仪上电后默认一直发数据包，分别是加速度，角速度和角度，角度范围是-180–180。这个代码是解析数据包读出角度，小车要用到的是偏航角，即xyz[2]。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">uint8_t</span> rx4;<br><span class="hljs-keyword">if</span>( huart==&amp;huart4)<br>	&#123;<br>		<span class="hljs-type">static</span> <span class="hljs-type">uint8_t</span> i = <span class="hljs-number">0</span>;<br>		<span class="hljs-type">static</span> <span class="hljs-type">int16_t</span> buff[<span class="hljs-number">8</span>]; <br>		buff[i++] = rx4;<br>			<span class="hljs-keyword">if</span>((i == <span class="hljs-number">1</span>) &amp;&amp; (buff[<span class="hljs-number">0</span>] != <span class="hljs-number">0x55</span>))<br>			&#123;<br>				i = <span class="hljs-number">0</span>;<br>			&#125;<br>			<span class="hljs-keyword">if</span>((i == <span class="hljs-number">2</span>) &amp;&amp; (buff[<span class="hljs-number">1</span>] != <span class="hljs-number">0x53</span>))<br>			&#123;<br>				i = <span class="hljs-number">0</span>;<br>			&#125;<br>			<span class="hljs-keyword">if</span>(i == <span class="hljs-number">8</span>)<br>			&#123;<br>					<span class="hljs-type">int16_t</span> value_x = (buff[<span class="hljs-number">3</span>] &lt;&lt; <span class="hljs-number">8</span>) | buff[<span class="hljs-number">2</span>];<br>					<span class="hljs-type">int16_t</span> value_y = (buff[<span class="hljs-number">5</span>] &lt;&lt; <span class="hljs-number">8</span>) | buff[<span class="hljs-number">4</span>];<br>					<span class="hljs-type">int16_t</span> value_z = (buff[<span class="hljs-number">7</span>] &lt;&lt; <span class="hljs-number">8</span>) | buff[<span class="hljs-number">6</span>];<br>					xyz[<span class="hljs-number">0</span>] = (<span class="hljs-type">float</span>)value_x / <span class="hljs-number">32768</span>* <span class="hljs-number">180</span> ;<br>					xyz[<span class="hljs-number">1</span>] = (<span class="hljs-type">float</span>)value_y/ <span class="hljs-number">32768</span>* <span class="hljs-number">180</span>;<br>					xyz[<span class="hljs-number">2</span>] = (<span class="hljs-type">float</span>)value_z / <span class="hljs-number">32768</span>* <span class="hljs-number">180</span>;<br>                <br>					<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.1f,%.1f,%.1f\r\n&quot;</span>,xyz[<span class="hljs-number">0</span>],xyz[<span class="hljs-number">1</span>],xyz[<span class="hljs-number">2</span>]);<br>				<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">8</span>; j++)<br>				&#123;<br>					buff[j] = <span class="hljs-number">0</span>;<br>				&#125;<br>				i = <span class="hljs-number">0</span>;<br>			&#125;<br>		HAL_UART_Receive_IT(&amp;huart4,&amp;rx4,<span class="hljs-number">1</span>);<br>	&#125;<br></code></pre></td></tr></table></figure>
+<p>或者后面写</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">if</span>(rx3 == <span class="hljs-number">0x11</span>||p_cnt == <span class="hljs-number">12</span>)&#123;<br>		  Load(<span class="hljs-number">15</span>,<span class="hljs-number">15</span>);<br>		  turn(<span class="hljs-number">270</span>);<br>		  Load(<span class="hljs-number">15</span>,<span class="hljs-number">15</span>);<br>          HAL_Delay(<span class="hljs-number">300</span>);<br>		  turn(<span class="hljs-number">0</span>);<br>		  line(<span class="hljs-number">0</span>);<br>	  &#125;<br></code></pre></td></tr></table></figure>
 
-<p>资料的网址</p>
-<p><a target="_blank" rel="noopener" href="https://wit-motion.yuque.com/wumwnr/ltst03/wegquy#Ge5Fv">WT61协议</a></p>
-<p>下面插一点图片</p>
-<img src="01.jpg" srcset="/img/loading.gif" lazyload alt="小车" width="400" height="400"/>
+<p>走直线和转向</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">line</span><span class="hljs-params">(<span class="hljs-type">float</span> du)</span><br>&#123;<br>	  pidMPU6050YawMovement.target_val=du;<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&gt;<span class="hljs-number">360</span>)pidMPU6050YawMovement.target_val-=<span class="hljs-number">360</span>;<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&lt;<span class="hljs-number">0</span>)pidMPU6050YawMovement.target_val+=<span class="hljs-number">360</span>;<br>	 <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>) <br>	 &#123;<br>	  HAL_UART_Receive_IT(&amp;huart4,&amp;rx4,<span class="hljs-number">1</span>);<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&lt;<span class="hljs-number">10</span>)<br>	  &#123;<br>		<span class="hljs-keyword">if</span>(jiaoz&gt;<span class="hljs-number">350</span>)  jiaoz-=<span class="hljs-number">360</span>;<br>	  &#125;<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&gt;<span class="hljs-number">350</span>)<br>	  &#123;<br>		<span class="hljs-keyword">if</span>(jiaoz&lt;<span class="hljs-number">10</span>)  jiaoz+=<span class="hljs-number">360</span>;<br>	  &#125;<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val==<span class="hljs-number">0</span>&amp;&amp;jiaoz&gt;<span class="hljs-number">300</span>)jiaoz-=<span class="hljs-number">360</span>;<br>	  out1 = PID_realize2(&amp;pidMPU6050YawMovement,jiaoz);<br>	  Load(<span class="hljs-number">20</span>-out1,<span class="hljs-number">20</span>+out1);<br>	 &#125;<br>&#125;<br><span class="hljs-type">void</span> <span class="hljs-title function_">turn</span><span class="hljs-params">(<span class="hljs-type">float</span> du)</span><br>&#123;<br>	  pidMPU6050YawMovement.target_val=du;<span class="hljs-comment">//jiaoz + </span><br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&gt;<span class="hljs-number">360</span>)pidMPU6050YawMovement.target_val-=<span class="hljs-number">360</span>;<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&lt;<span class="hljs-number">0</span>)pidMPU6050YawMovement.target_val+=<span class="hljs-number">360</span>;<br>	 <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>) <br>	 &#123;<br>	    <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&lt;<span class="hljs-number">10</span>)<br>	     &#123;<br>		   <span class="hljs-keyword">if</span>(jiaoz&gt;<span class="hljs-number">350</span>)  jiaoz-=<span class="hljs-number">360</span>;<br>	     &#125;<br>	    <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val&gt;<span class="hljs-number">350</span>)<br>	    &#123;<br>		    <span class="hljs-keyword">if</span>(jiaoz&lt;<span class="hljs-number">10</span>)  jiaoz+=<span class="hljs-number">360</span>;<br>	    &#125;<br>	  HAL_UART_Receive_IT(&amp;huart4,&amp;rx4,<span class="hljs-number">1</span>);<br>	  <span class="hljs-keyword">if</span>(pidMPU6050YawMovement.target_val==<span class="hljs-number">0</span>&amp;&amp;jiaoz&gt;<span class="hljs-number">300</span>)jiaoz-=<span class="hljs-number">360</span>;<br>	  out1 = PID_realize2(&amp;pidMPU6050YawMovement,jiaoz);<br>	  Load(-out1,out1);<br>      <span class="hljs-keyword">if</span>(jiaoz&gt;pidMPU6050YawMovement.target_val<span class="hljs-number">-5</span>&amp;&amp;jiaoz&lt;pidMPU6050YawMovement.target_val+<span class="hljs-number">5</span>)		  &#123;pidMPU6050YawMovement.err_sum=<span class="hljs-number">0.0</span>;<span class="hljs-keyword">break</span>;&#125;<br>	 &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -308,8 +305,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>25-4-27</div>
-      <div>https://xin7104.github.io/2025/04/27/25-4-27/</div>
+      <div>25-4-28</div>
+      <div>https://xin7104.github.io/2025/04/28/25-4-28/</div>
     </div>
     <div class="license-meta">
       
@@ -321,7 +318,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>April 27, 2025</div>
+          <div>April 28, 2025</div>
         </div>
       
       
@@ -353,18 +350,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/28/25-4-28/" title="25-4-28">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">25-4-28</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/26/25-4-26/" title="25-4-26">
-                        <span class="hidden-mobile">25-4-26</span>
+                      <a href="/2025/04/27/25-4-27/" title="25-4-27">
+                        <span class="hidden-mobile">25-4-27</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
