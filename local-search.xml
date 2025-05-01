@@ -8,7 +8,7 @@
     <link href="/2025/04/30/25-4-30/"/>
     <url>/2025/04/30/25-4-30/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><h1 id="今日份"><a href="#今日份" class="headerlink" title="今日份"></a>今日份</h1><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>MX里面配置不好会锁芯片，导致识别不到st-link，下一次程序就会锁。</p><p>首先，和上次一样，可以用flymcu软件通过串口下载解锁，but注意boot引脚，对于stm32c8t6</p><ul><li>运行模式：BOOT 0为0，BOOT 1为0</li><li>烧写模式：BOOT 0为1，BOOT 1为0</li></ul><p>所以要改一个boot引脚。</p><p>其次，这次遇到的问题是System Core -&gt; SYS里Debug要把Serial Wire勾上。不勾就有问题，网上也有这么解释的，不过目前还不清楚外什么F407可以不勾。</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>MX里面配置不好会锁芯片，导致识别不到st-link，下一次程序就会锁。</p><p>首先，和上次一样，可以用flymcu软件通过串口下载解锁，but注意boot引脚，对于stm32c8t6</p><ul><li>运行模式：BOOT 0为0，BOOT 1为0</li><li>烧写模式：BOOT 0为1，BOOT 1为0</li></ul><p>所以要改一个boot引脚。</p><p>其次，这次遇到的问题是System Core -&gt; SYS里Debug要把Serial Wire勾上。不勾就有问题，网上也有这么解释的，不过目前还不清楚外什么F407可以不勾。</p>]]></content>
     
     
     
