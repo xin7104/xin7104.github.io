@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>25-5-9</title>
+    <link href="/2025/05/09/25-5-9/"/>
+    <url>/2025/05/09/25-5-9/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><p>最近事多，半期+校赛。<br>周六半期考模电，周天早上校赛测评，都搞完了弄集创赛。加一个形状识别。唉~又有的忙了。累。<br>“通过无线图传来操控小车到不同的位置，然后模拟一下物流传送带运输，用摄像头实时识别物体的颜色和形状,这样可以体现实际可用性，就是要加入到实际的场景中”<br>校赛结束后还有大概八天左右。时间很紧希望能搞完。<br>网上也有例程。呵呵几个月没碰FPGA了，之后再稍微学一下基础例程。</p><p>まあ，就酱，有博客可更新的话倒没那么枯燥。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>25-5-2</title>
     <link href="/2025/05/02/25-5-2/"/>
     <url>/2025/05/02/25-5-2/</url>
