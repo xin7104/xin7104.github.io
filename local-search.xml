@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>25-6-20</title>
+    <link href="/2025/06/20/25-6-20/"/>
+    <url>/2025/06/20/25-6-20/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><h1 id="Matlab"><a href="#Matlab" class="headerlink" title="Matlab"></a>Matlab</h1><p>学一下matlab，正好有点时间。</p><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>加 ；不显示运算结果，未用变量输出则默认用ans储存（answer）。按向上 (↑) 和向下箭头键 (↓) 可以重新调用以前的命令</p><h2 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h2><p>ones（x,y）创建全‘1’矩阵<br>zeros（x,y）创建全‘0’矩阵<br>rand（x,y）</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>25-6-14</title>
     <link href="/2025/06/14/25-6-14/"/>
     <url>/2025/06/14/25-6-14/</url>
