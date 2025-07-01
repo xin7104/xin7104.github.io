@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>25-7-1</title>
+    <link href="/2025/07/01/25-7-1/"/>
+    <url>/2025/07/01/25-7-1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="MaixCAM"><a href="#MaixCAM" class="headerlink" title="MaixCAM"></a>MaixCAM</h1><p>可以单文件or多文件（项目）<br>单个文件的话打开直接运行即可<br>多个的话打开文件夹，要有一个主程序入口，即<code>main.py</code></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>25-6-22</title>
     <link href="/2025/06/22/25-6-22/"/>
     <url>/2025/06/22/25-6-22/</url>
