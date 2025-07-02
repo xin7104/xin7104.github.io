@@ -19,15 +19,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  MaixCAM1可以单文件or多文件（项目）单个文件的话打开直接运行即可多个的话打开文件夹，要有一个主程序入口，即main.py 屏幕使用导入display模块： 1from maix import display  创建一个Display对象： 1disp &#x3D; display.Display()">
+    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  MaixCAM1可以单文件or多文件（项目）单个文件的话打开直接运行即可多个的话打开文件夹，要有一个主程序入口，即main.py要注意while后面跟着的 12while 1:                     #一般不用这个while not app.need_exit():   #用这个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="25-7-1">
 <meta property="og:url" content="https://xin7104.github.io/2025/07/01/25-7-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  MaixCAM1可以单文件or多文件（项目）单个文件的话打开直接运行即可多个的话打开文件夹，要有一个主程序入口，即main.py 屏幕使用导入display模块： 1from maix import display  创建一个Display对象： 1disp &#x3D; display.Display()">
+<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  MaixCAM1可以单文件or多文件（项目）单个文件的话打开直接运行即可多个的话打开文件夹，要有一个主程序入口，即main.py要注意while后面跟着的 12while 1:                     #一般不用这个while not app.need_exit():   #用这个">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-07-01T12:58:41.000Z">
-<meta property="article:modified_time" content="2025-07-02T04:28:57.673Z">
+<meta property="article:modified_time" content="2025-07-02T06:02:18.577Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k words
+          1.9k words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          15 mins
+          16 mins
         
       </span>
     
@@ -277,7 +277,11 @@
                 
                 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
 
-<h1 id="MaixCAM"><a href="#MaixCAM" class="headerlink" title="MaixCAM"></a>MaixCAM</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>可以单文件or多文件（项目）<br>单个文件的话打开直接运行即可<br>多个的话打开文件夹，要有一个主程序入口，即<code>main.py</code></p>
+<h1 id="MaixCAM"><a href="#MaixCAM" class="headerlink" title="MaixCAM"></a>MaixCAM</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>可以单文件or多文件（项目）<br>单个文件的话打开直接运行即可<br>多个的话打开文件夹，要有一个主程序入口，即<code>main.py</code><br>要注意while后面跟着的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:                     <span class="hljs-comment">#一般不用这个</span><br><span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> app.need_exit():   <span class="hljs-comment">#用这个</span><br></code></pre></td></tr></table></figure>
+
+
+
 <h2 id="屏幕使用"><a href="#屏幕使用" class="headerlink" title="屏幕使用"></a>屏幕使用</h2><p>导入display模块：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> maix <span class="hljs-keyword">import</span> display<br></code></pre></td></tr></table></figure>
 
@@ -380,7 +384,10 @@
 <h3 id="和-bytes-数据互相转换"><a href="#和-bytes-数据互相转换" class="headerlink" title="和 bytes 数据互相转换"></a>和 bytes 数据互相转换</h3><p><code>image.Image</code>提供了<code>to_bytes</code>方法，可以转换图像为<code>bytes</code>数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> maix <span class="hljs-keyword">import</span> image<br>img = image.Image(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, image.Format.FMT_RGB888)<br>data = img.to_bytes()<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(data), <span class="hljs-built_in">len</span>(data), img.data_size())<span class="hljs-comment">#&lt;class &#x27;bytes&#x27;&gt; 230400 230400</span><br><span class="hljs-comment">#下面的没懂，不过应该用不到</span><br>img_jpeg = image.from_bytes(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, image.Format.FMT_RGB888, data)<br><span class="hljs-built_in">print</span>(img_jpeg)<br>img = img_jpeg.to_format(image.Format.FMT_RGB888)<br><span class="hljs-built_in">print</span>(img)<br></code></pre></td></tr></table></figure>
 
-<h2 id="触摸屏"><a href="#触摸屏" class="headerlink" title="触摸屏"></a>触摸屏</h2>
+<h2 id="触摸屏"><a href="#触摸屏" class="headerlink" title="触摸屏"></a>触摸屏</h2><h3 id="读取触摸"><a href="#读取触摸" class="headerlink" title="读取触摸"></a>读取触摸</h3><p>用<code>maix.touchscreen.TouchScreen</code> 类来读取</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> maix <span class="hljs-keyword">import</span> touchscreen, app, time<br>ts = touchscreen.TouchScreen()<span class="hljs-comment">#这句很重要</span><br>pressed_already = <span class="hljs-literal">False</span><br>last_x = <span class="hljs-number">0</span><br>last_y = <span class="hljs-number">0</span><br>last_pressed = <span class="hljs-literal">False</span><br><span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> app.need_exit():<br>    x, y, pressed = ts.read()<br>    <span class="hljs-keyword">if</span> x != last_x <span class="hljs-keyword">or</span> y != last_y <span class="hljs-keyword">or</span> pressed != last_pressed:<br>        <span class="hljs-built_in">print</span>(x, y, pressed)<br>        last_x = x<br>        last_y = y<br>        last_pressed = pressed<br>    <span class="hljs-keyword">if</span> pressed:<br>        pressed_already = <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> pressed_already:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;clicked, x: <span class="hljs-subst">&#123;x&#125;</span>, y: <span class="hljs-subst">&#123;y&#125;</span>&quot;</span>)<br>            pressed_already = <span class="hljs-literal">False</span><br>    time.sleep_ms(<span class="hljs-number">1</span>)  <span class="hljs-comment"># sleep some time to free some CPU usage</span><br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
@@ -441,6 +448,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/07/02/25-7-2/" title="25-7-2">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">25-7-2</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
