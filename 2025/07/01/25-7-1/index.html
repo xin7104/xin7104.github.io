@@ -27,7 +27,7 @@
 <meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  MaixCAM1可以单文件or多文件（项目）单个文件的话打开直接运行即可多个的话打开文件夹，要有一个主程序入口，即main.py 屏幕使用导入display模块： 1from maix import display  创建一个Display对象： 1disp &#x3D; display.Display()">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-07-01T12:58:41.000Z">
-<meta property="article:modified_time" content="2025-07-01T14:41:44.490Z">
+<meta property="article:modified_time" content="2025-07-01T14:47:42.763Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          689 words
+          767 words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          6 mins
+          7 mins
         
       </span>
     
@@ -319,7 +319,11 @@
 <h3 id="画框"><a href="#画框" class="headerlink" title="画框"></a>画框</h3><p>用<code>image</code>里的<code>draw_rect</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> maix <span class="hljs-keyword">import</span> image<br>img = image.Image(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, image.Format.FMT_RGB888)<br>img.draw_rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, image.Color.from_rgb(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))<br></code></pre></td></tr></table></figure>
 
-<h3 id="写字符串"><a href="#写字符串" class="headerlink" title="写字符串"></a>写字符串</h3>
+<h3 id="写字符串"><a href="#写字符串" class="headerlink" title="写字符串"></a>写字符串</h3><p><code>image.Image</code>提供了<code>draw_string</code>方法，可以在图像上写字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> maix <span class="hljs-keyword">import</span> image<br>img = image.Image(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, image.Format.FMT_RGB888)<br>img.draw_string(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-string">&quot;Hello MaixPy&quot;</span>, image.Color.from_rgb(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))<br></code></pre></td></tr></table></figure>
+
+<p><code>x</code>, <code>y</code>, <code>text</code>, <code>color</code>，<code>x</code> 和 <code>y</code> 是文字的左上角坐标，<code>text</code> 是要写的文字，<code>color</code> 是文字的颜色，可以使用<code>image.Color.from_rgb</code>方法创建颜色。</p>
+
                 
               </div>
             
