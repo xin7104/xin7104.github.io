@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    新板子引脚LED          PC1 PC2 PC3KEY          PF3 PF4 PF5beep        PG9uart * 4：uart2       PA2  PA3uart3       PB10 PB11uart4       PC10 PC11uart6">
+    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  sensor模块sensor.reset() 初始化感光元件sensor.set_pixformat() 设置像素模式。彩色或黑白    参数：sensor.GRAYSCALE: 灰度，每个像素8bit。          sensor.RGB565: 彩色，每个像素16bit。sensor.set_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="25-7-2">
-<meta property="og:url" content="https://xin7104.github.io/2025/07/02/25-7-2/index.html">
+<meta property="og:title" content="openmv">
+<meta property="og:url" content="https://xin7104.github.io/2025/07/08/openmv/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d    新板子引脚LED          PC1 PC2 PC3KEY          PF3 PF4 PF5beep        PG9uart * 4：uart2       PA2  PA3uart3       PB10 PB11uart4       PC10 PC11uart6">
+<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  sensor模块sensor.reset() 初始化感光元件sensor.set_pixformat() 设置像素模式。彩色或黑白    参数：sensor.GRAYSCALE: 灰度，每个像素8bit。          sensor.RGB565: 彩色，每个像素16bit。sensor.set_">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-07-02T06:16:13.000Z">
-<meta property="article:modified_time" content="2025-07-02T06:18:27.655Z">
+<meta property="article:published_time" content="2025-07-08T11:43:56.000Z">
+<meta property="article:modified_time" content="2025-07-08T12:37:43.052Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>25-7-2 - Hexo</title>
+  <title>openmv - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="25-7-2"></span>
+            <span id="subtitle" data-typed-text="openmv"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-02 14:16" pubdate>
-          July 2, 2025 pm
+        <time datetime="2025-07-08 19:43" pubdate>
+          July 8, 2025 pm
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          20 words
+          862 words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 mins
+          8 mins
         
       </span>
     
@@ -270,16 +270,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">25-7-2</h1>
+            <h1 id="seo-header">openmv</h1>
             
             
               <div class="markdown-body">
                 
                 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
 
-
-
-<h1 id="新板子引脚"><a href="#新板子引脚" class="headerlink" title="新板子引脚"></a>新板子引脚</h1><p>LED          PC1 PC2 PC3<br>KEY          PF3 PF4 PF5<br>beep        PG9<br>uart * 4：<br>uart2       PA2  PA3<br>uart3       PB10 PB11<br>uart4       PC10 PC11<br>uart6       PC6  PC7<br>tb6612     AIN1 PF1   AIN2 PF0<br>                 BIN1 PF7   BIN2 PF8<br>                 PWMA PE9   PWMB PE11<br>电机         TIM4  PD12   PD13<br>                 TIM2 PA1   PA5<br>八路循迹  PB12 PB13 PB15 PG6 PG7 PG8 PC4 PD3</p>
+<p>sensor模块<br>sensor.reset() 初始化感光元件<br>sensor.set_pixformat() 设置像素模式。彩色或黑白<br>    参数：sensor.GRAYSCALE: 灰度，每个像素8bit。<br>          sensor.RGB565: 彩色，每个像素16bit。<br>sensor.set_framesize() 设置图像的大小<br>    sensor.VGA: 640x480<br>sensor.skip_frames(n&#x3D;10) 跳过n张照片，在更改设置后，跳过一些帧，等待感光元件变稳定。<br>sensor.snapshot() 拍摄一张照片，返回一个image对象。</p>
+<p>sensor.set_auto_gain() 自动增益开启（True）或者关闭（False）。在使用颜色追踪时，需要关闭自动增益。<br>sensor.set_auto_whitebal() 自动白平衡开启（True）或者关闭（False）。在使用颜色追踪时，需要关闭自动白平衡。<br>sensor.set_auto_exposure(enable[, exposure_us])<br>enable 打开（True）或关闭（False）自动曝光。默认打开。<br>如果 enable 为False， 则可以用 exposure_us 设置一个固定的曝光时间（以微秒为单位）。<br>设置窗口ROI：<br>sensor.set_windowing(roi)<br>eg:sensor.set_framesize(sensor.VGA) # 高分辨率<br>   sensor.set_windowing((640, 80)) #取中间的640*80区域<br>sensor.set_hmirror(True) #水平方向翻转<br>sensor.set_vflip(True)   #垂直方向翻转</p>
+<p>可以通过  image.get_pixel(x, y)  方法来获取一个像素点的值。<br>image.get_pixel(x, y)<br>        对于灰度图: 返回(x,y)坐标的灰度值.<br>        对于彩色图: 返回(x,y)坐标的(r,g,b)的tuple.<br>同样，可以通过image.set_pixel(x, y, pixel)方法，来设置一个像素点的值。<br>image.set_pixel(x, y, pixel)<br>        对于灰度图: 设置(x,y)坐标的灰度值。<br>        对于彩色图: 设置(x,y)坐标的(r,g,b)的值。<br>eg：img.set_pixcel(10,10,(255,0,0)) #设置坐标(10,10)的像素点为红色(255,0,0)<br>获取图像的宽度和高度<br>image.width()<br>返回图像的宽度(像素)</p>
+<p>image.height()<br>返回图像的高度(像素)</p>
+<p>image.format()<br>灰度图会返回 sensor.GRAYSCALE，彩色图会返回 sensor.RGB565。</p>
+<p>image.size()<br>返回图像的大小(byte)<br>图像的运算<br>image.invert()<br>取反，对于二值化的图像，0(黑)变成1(白)，1(白)变成0(黑)。<br>使用图像的统计信息    Statistics<br>roi的格式是(x, y, w, h)的tupple.<br>x:ROI区域中左上角的x坐标        y:ROI区域中左上角的y坐标<br>w:ROI的宽度                    h:ROI的高度<br>eg：img.get_statistics(roi&#x3D;(0,0,10,20))</p>
+<p>画图：<br>画线<br>image.draw_line(line_tuple, color&#x3D;White) 在图像中画一条直线。<br>        line_tuple的格式是(x0, y0, x1, y1)，意思是(x0, y0)到(x1, y1)的直线。<br>                颜色可以是灰度值(0-255)</p>
+<p>语法</p>
+<p>title()以首字母大写的方式显示每个单词</p>
+<p>lower()全改为小写</p>
+<p>upper()全改为大写</p>
+<p>rstrip()删除末尾的空白，不过是临时的，可以存起来</p>
+<p>lstrip()删除开头的空白，不过是临时的，可以存起来</p>
+<p>strip()删除两端的空白，不过是临时的，可以存起来</p>
+<p>#两个乘号是乘方运算</p>
+<p>str()让Python将非字符串值表示为字符串</p>
+<p>#.append()为列表结尾添加元素<br>#insert()可在列表的任何位置添加新元素<br>#del可删除元素<br>#.pop()也可删除元素,不过可用,不加参数默认删最后一个<br>#可根据值删除元素 用remove(),参数可写字符串,可写变量,不过只能删除第一个符合的值<br>#sort()永久性地修改列表元素的排列顺序 按首字母排序<br>#sorted()临时排序<br>#reverse()永久性地修改列表元素的排列顺序(倒着排序),不过再用一次便可恢复<br>#len()可快速获悉列表的长度</p>
 
                 
               </div>
@@ -297,8 +311,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>25-7-2</div>
-      <div>https://xin7104.github.io/2025/07/02/25-7-2/</div>
+      <div>openmv</div>
+      <div>https://xin7104.github.io/2025/07/08/openmv/</div>
     </div>
     <div class="license-meta">
       
@@ -310,7 +324,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>July 2, 2025</div>
+          <div>July 8, 2025</div>
         </div>
       
       
@@ -342,9 +356,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/08/openmv/" title="openmv">
+                      <a href="/2025/07/08/%E9%87%8D%E5%AD%A632/" title="重学32">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">openmv</span>
+                        <span class="hidden-mobile">重学32</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -352,8 +366,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/01/25-7-1/" title="25-7-1">
-                        <span class="hidden-mobile">25-7-1</span>
+                      <a href="/2025/07/02/25-7-2/" title="25-7-2">
+                        <span class="hidden-mobile">25-7-2</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
