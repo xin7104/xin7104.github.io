@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  关于在中断使用HAL_Delay()keysking的解决方案是调整中断优先级，即滴答定时器本来是15，调成14，用到的中断调成15 &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;">
+    <meta name="description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  备赛国赛，这里更新一下常用模块，从之前的工程扒拉出来。基于STM32F407ZGT6 串口屏相关函数(串口屏不在手边待验证)D:\project\STM32\STM32MX_Project\day\test_chuan\Project  这里copy的.c文件 12345678910111213141">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重学32">
-<meta property="og:url" content="https://xin7104.github.io/2025/07/08/%E9%87%8D%E5%AD%A632/index.html">
+<meta property="og:title" content="25-7-9">
+<meta property="og:url" content="https://xin7104.github.io/2025/07/09/25-7-9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  关于在中断使用HAL_Delay()keysking的解决方案是调整中断优先级，即滴答定时器本来是15，调成14，用到的中断调成15 &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;">
+<meta property="og:description" content="1hexo clean &amp;&amp; hexo g &amp;&amp; hexo d  备赛国赛，这里更新一下常用模块，从之前的工程扒拉出来。基于STM32F407ZGT6 串口屏相关函数(串口屏不在手边待验证)D:\project\STM32\STM32MX_Project\day\test_chuan\Project  这里copy的.c文件 12345678910111213141">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-07-08T11:44:09.000Z">
-<meta property="article:modified_time" content="2025-07-08T12:38:28.579Z">
+<meta property="article:published_time" content="2025-07-09T08:10:14.000Z">
+<meta property="article:modified_time" content="2025-07-09T08:27:23.109Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>重学32 - Hexo</title>
+  <title>25-7-9 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="重学32"></span>
+            <span id="subtitle" data-typed-text="25-7-9"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-08 19:44" pubdate>
-          July 8, 2025 pm
+        <time datetime="2025-07-09 16:10" pubdate>
+          July 9, 2025 pm
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k words
+          421 words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          10 mins
+          4 mins
         
       </span>
     
@@ -270,19 +270,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">重学32</h1>
+            <h1 id="seo-header">25-7-9</h1>
             
             
               <div class="markdown-body">
                 
                 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
 
-<p>关于在中断使用HAL_Delay()keysking的解决方案是调整中断优先级，即滴答定时器本来是15，调成14，用到的中断调成15</p>
-<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;<br>关于外部中断EXTI<br>eg:while(1)中有长时间延时+按键检测，按键按下是可能在延时检测不到，这时候可以用外部中断<br>上拉（Pull-up）：默认将输入信号拉高，适用于 低电平触发（下降沿） 的情况<br>下拉（Pull-down）：默认将输入信号拉低，适用于 高电平触发（上升沿） 的情况<br>标准库的初始化包括配置EXTI参数和NVIC分组，IRQHandler函数需要手动清零标志位<br>HAL库图形化配置EXTI和NVIC分组，生成的代码包含清零标志位，写HAL_GPIO_EXTI_Callback即可<br>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</p>
-<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;<br>关于串口<br>HAL库：<br>配置好后系统生成的MX_USART1_UART_Init();<br>串口发送：HAL_UART_Transmit(&amp;huart1,receive,sizeof(receive),100);<br>注意第二个参数类型是（uint8_t*）,最后一个参数单位是ms<br>串口接收：<br>轮询模式：<br>会阻塞程序运行且只能发送定长数据<br>HAL_UART_Receive(&amp;huart1,(uint8_t*)r_message,2,HAL_MAX_DELAY);<br>加入中断<br>发送：HAL_UART_Transmit_IT(&amp;huart1,receive,sizeof(receive));用法不变<br>与之前相比少最后一个参数，有了中断更节省cpu资源<br>接收：HAL_UART_Receive_IT(&amp;huart1,(uint8_t*)r_message,2);<br>与发送不同，为了防止上次接收未完成又开启下一次接收，放在while（1）前只执行一次，相当于开启中断，需要编写callback函数，callback函数结尾继续启动串口接收<br>DMA:图形化界面添加dma通道，发送和接收函数的IT改为DMA即可<br>HAL_UART_Transmit_DMA(&amp;huart1,(uint8_t*)r_message,2);<br>HAL_UART_Receive_DMA(&amp;huart1,(uint8_t*)r_message,2);<br>but,dma的初始化需要在usart前面，注意要手动调整一下<br>接收不定长数据：<br>这个就没有新的发送函数了，只有接收,有阻塞，中断，DMA三种模式<br>HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint16_t *RxLen, uint32_t Timeout)<br>HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)&#x2F;&#x2F;Size是可接收的最大数据长度，并不是接收的长度<br>HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)<br>回调函数是下面这个<br>void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)<br>注意回调函数多了一个size参数，是接收到了字节数<br>最后要关闭dma传输过半中断，f4不用？</p>
-<p>还有一个要注意<br>一般串口接收有两种方式<br>eg：每次中断读取1字节<br>1、 使用 HAL_UART_Receive_IT：<br>uint8_t rx_byte;<br>HAL_UART_Receive_IT(&amp;huart1, &amp;rx_byte, 1); &#x2F;&#x2F; 启动接收<br>&#x2F;&#x2F; 在回调函数中处理数据<br>void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {<br>    if (huart &#x3D;&#x3D; &amp;huart1) {<br>        &#x2F;&#x2F; 处理 rx_byte<br>        HAL_UART_Receive_IT(&amp;huart1, &amp;rx_byte, 1); &#x2F;&#x2F; 重新启动接收<br>    }<br>}<br>2、使用 __HAL_UART_ENABLE_IT<br>&#x2F;&#x2F; 初始化时使能RXNE中断<br>__HAL_UART_ENABLE_IT(&amp;huart1, UART_IT_RXNE);<br>&#x2F;&#x2F; 中断服务函数中手动处理<br>void USART1_IRQHandler(void) {<br>    if (__HAL_UART_GET_FLAG(&amp;huart1, UART_FLAG_RXNE)) {<br>        uint8_t rx_byte &#x3D; huart1.Instance-&gt;DR; &#x2F;&#x2F; 读取数据<br>        &#x2F;&#x2F; 处理 rx_byte<br>        __HAL_UART_CLEAR_FLAG(&amp;huart1, UART_FLAG_RXNE);<br>    }<br>}</p>
-<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;<br>TIM<br>1.MX_TIM1_Init();CUBEMX自动生成的初始化<br>2.HAL_TIM_Base_Start(&amp;htim2);<br>2.HAL_TIM_Base_Start_IT(&amp;htim2);两种定时器启动函数，一种有中断，一种无中断<br>3.void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)&#x2F;&#x2F;中断回调函数是这个<br>__HAL_TIM_GET_COUNTER(&amp;htim1)<br>__HAL_TIM_SET_COUNTER(&amp;htim1)&#x2F;&#x2F;获得or设置计数器值<br>__HAL_TIM_GET_AUTORELOAD(&amp;htim1)<br>__HAL_TIM_GET_AUTORELOAD(&amp;htim1)&#x2F;&#x2F;获得or设置自动重装载寄存器值<br>__HAL_TIM_GET_PRESCALER(&amp;htim1)&#x2F;&#x2F;设置预分频器值</p>
-<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</p>
+<p>备赛国赛，这里更新一下常用模块，从之前的工程扒拉出来。<br>基于STM32F407ZGT6</p>
+<h2 id="串口屏相关函数-串口屏不在手边待验证"><a href="#串口屏相关函数-串口屏不在手边待验证" class="headerlink" title="串口屏相关函数(串口屏不在手边待验证)"></a>串口屏相关函数(串口屏不在手边待验证)</h2><p>D:\project\STM32\STM32MX_Project\day\test_chuan\Project  这里copy的<br>.c文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;chuan.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;main.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span><br><span class="hljs-comment">//反转字符串</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">char</span> str[], <span class="hljs-type">int</span> length)</span> &#123;<br>    <span class="hljs-type">int</span> start = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> end = length - <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> (start &lt; end) &#123;<br>        <span class="hljs-type">char</span> temp = str[start];<br>        str[start] = str[end];<br>        str[end] = temp;<br>        start++;<br>        end--;<br>    &#125;<br>&#125;<br><span class="hljs-comment">//itoa函数，将整数转换为字符串</span><br><span class="hljs-comment">//转换好的字符串+&#x27;\0&#x27; 后面的不会覆盖</span><br><span class="hljs-type">char</span>* <span class="hljs-title function_">itoa</span><span class="hljs-params">(<span class="hljs-type">int</span> num, <span class="hljs-type">char</span>* str, <span class="hljs-type">int</span> base)</span> &#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> isNegative = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-comment">// 处理 0 的情况</span><br>    <span class="hljs-keyword">if</span> (num == <span class="hljs-number">0</span>) &#123;<br>        str[i++] = <span class="hljs-string">&#x27;0&#x27;</span>;<br>        str[i] = <span class="hljs-string">&#x27;\0&#x27;</span>;<br>        <span class="hljs-keyword">return</span> str;<br>    &#125;<br>    <span class="hljs-comment">// 处理负数（仅限于十进制）</span><br>    <span class="hljs-keyword">if</span> (num &lt; <span class="hljs-number">0</span> &amp;&amp; base == <span class="hljs-number">10</span>) &#123;<br>        isNegative = <span class="hljs-number">1</span>;<br>        num = -num;<br>    &#125;<br>    <span class="hljs-comment">// 处理数字转换</span><br>    <span class="hljs-keyword">while</span> (num != <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-type">int</span> rem = num % base;<br>        str[i++] = (rem &gt; <span class="hljs-number">9</span>) ? (rem - <span class="hljs-number">10</span>) + <span class="hljs-string">&#x27;a&#x27;</span> : rem + <span class="hljs-string">&#x27;0&#x27;</span>;<br>        num = num / base;<br>    &#125;<br>    <span class="hljs-comment">// 如果是负数，添加负号</span><br>    <span class="hljs-keyword">if</span> (isNegative) &#123;<br>        str[i++] = <span class="hljs-string">&#x27;-&#x27;</span>;<br>    &#125;<br>    str[i] = <span class="hljs-string">&#x27;\0&#x27;</span>; <span class="hljs-comment">// 添加字符串结束符</span><br>    <span class="hljs-comment">// 反转字符串</span><br>    reverse(str, i);<br>    <span class="hljs-keyword">return</span> str;<br>&#125;<br><span class="hljs-type">void</span> <span class="hljs-title function_">Send</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> ch)</span><br>&#123;<br>	<span class="hljs-type">char</span> str[<span class="hljs-number">15</span>];<br>	itoa(a,str,<span class="hljs-number">10</span>);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;add 1,%d,&quot;</span>,ch);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>,str);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\xff\xff\xff&quot;</span>);<br>&#125;<br><span class="hljs-comment">//发送字符串+数值 第一个参数是控件，第二个是数值</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">SendData</span><span class="hljs-params">(<span class="hljs-type">char</span>* ch,<span class="hljs-type">int</span> a)</span><br>&#123;<br>	<span class="hljs-type">char</span> str[<span class="hljs-number">15</span>];<br>	itoa(a,str,<span class="hljs-number">10</span>);<br>	<span class="hljs-type">uint8_t</span> sz=<span class="hljs-built_in">strlen</span>(ch);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>,ch);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>,str);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\xff\xff\xff&quot;</span>);<br>&#125;<br><span class="hljs-comment">//发送字符串*2  第一个参数是控件，第二个是内容</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">SendString</span><span class="hljs-params">(<span class="hljs-type">char</span>* ch1,<span class="hljs-type">char</span>* ch2)</span><br>&#123;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\&quot;&quot;</span>,ch1);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\&quot;&quot;</span>,ch2);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\xff\xff\xff&quot;</span>);<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>.h文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">ifndef</span> __CHUAN_H__</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> __CHUAN_H__</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">char</span> str[], <span class="hljs-type">int</span> length)</span>;<br><span class="hljs-type">char</span>* <span class="hljs-title function_">itoa</span><span class="hljs-params">(<span class="hljs-type">int</span> num, <span class="hljs-type">char</span>* str, <span class="hljs-type">int</span> base)</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SendData</span><span class="hljs-params">(<span class="hljs-type">char</span>* ch,<span class="hljs-type">int</span> a)</span>;<br><span class="hljs-type">void</span> <span class="hljs-title function_">SendString</span><span class="hljs-params">(<span class="hljs-type">char</span>* ch1,<span class="hljs-type">char</span>* ch2)</span>;<br><span class="hljs-meta">#<span class="hljs-keyword">endif</span></span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -300,8 +301,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>重学32</div>
-      <div>https://xin7104.github.io/2025/07/08/重学32/</div>
+      <div>25-7-9</div>
+      <div>https://xin7104.github.io/2025/07/09/25-7-9/</div>
     </div>
     <div class="license-meta">
       
@@ -313,7 +314,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>July 8, 2025</div>
+          <div>July 9, 2025</div>
         </div>
       
       
@@ -345,18 +346,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/09/25-7-9/" title="25-7-9">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">25-7-9</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/08/openmv/" title="openmv">
-                        <span class="hidden-mobile">openmv</span>
+                      <a href="/2025/07/08/%E9%87%8D%E5%AD%A632/" title="重学32">
+                        <span class="hidden-mobile">重学32</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
